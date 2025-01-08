@@ -1,0 +1,19 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.0)
+PROJECT(BingHomePicDownloader)
+LIST(APPEND CMAKE_PREFIX_PATH "lib/curl-8.11.1_3-win64-mingw")
+FIND_PACKAGE(CURL REQUIRED)
+INCLUDE_DIRECTORIES(
+        include
+        ${CURL_INCLUDE_DIR}
+)
+AUX_SOURCE_DIRECTORY(
+        src DIR_SRCS
+)
+ADD_EXECUTABLE(
+        BingHomePicDownloader
+        ${DIR_SRCS}
+)
+TARGET_LINK_LIBRARIES(
+        BingHomePicDownloader
+        ${CURL_LIBRARIES}
+)
