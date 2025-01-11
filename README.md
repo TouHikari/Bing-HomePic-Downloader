@@ -1,16 +1,6 @@
-# StuInfo-Manager
+# Bing-HomePic-Downloader
 
 ## How to make
-
-### Linux
-
-- Install the `gcc` compiler and `cmake` tool.
-- Run the following commands in the terminal:
-
-```bash
-chmod +x build.sh
-bash build.sh
-```
 
 ### Windows
 

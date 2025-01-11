@@ -1,8 +1,8 @@
-#include <stdio.h>
-#include <curl/curl.h>
- 
+#include "../include/api.h"
+
 int main(void)
 {
- 
+	api();
+
 	return 0;
 }
