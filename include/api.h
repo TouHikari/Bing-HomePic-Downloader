@@ -5,9 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <curl/curl.h>
-
-#define HTML_URL "https://cn.bing.com/"
-#define LOCAL_IMAGE_FILE "./bin/img/background_image.jpg"
+#include "../include/cJSON.h"
 
 // Callback function to write data to a buffer
 struct MemoryStruct {
@@ -16,9 +14,10 @@ struct MemoryStruct {
 };
 
 // Function prototypes
+void log_message(const char *message);
 size_t WriteMemoryCallback(void *contents, size_t size, size_t nmemb, struct MemoryStruct *userp);
-void download_image(const char *url);
-const char* extract_image_url(const char *html);
-void api(void);
+void download_image(const char *url, const char *filename);
+void api(int days);
+void close_log(void);
 
 #endif
